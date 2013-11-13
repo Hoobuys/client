@@ -85,7 +85,7 @@ var hoo_ = function(data){
 		};
 
 
-		this.init = function(id, key){
+		this.init = function(id, key, callback){
 
               if(!id && !key)
               {
@@ -97,13 +97,8 @@ var hoo_ = function(data){
               }
 
              app_id = id;
-             app_key = key;
-
-              if(!ls.userid)              
-              	make_logout();
-
-             userid = ls.userid;
-
+             app_key = key;    
+             
 
 
 		}
@@ -111,7 +106,25 @@ var hoo_ = function(data){
 
 		this.login = function( callback){
 
-				var rs = exec("login");
+
+              if(!ls.userid) 
+               if(callback instanceof Function)             
+              	  {
+              	  	
+              	  	if(make_logout())              	  	  
+			  	         callback(false, {url:get_url("logout"), error: "User not logued"});
+			  	     else
+			  	         callback(true, {url:get_url("logout"), error: "Error on logout"});
+
+			  	    return false;
+
+              	  }
+              	else
+              	  make_logout();
+
+             userid = ls.userid;             
+				
+		     var rs = exec("login");
 
 				if(rs && callback instanceof Function)
 					{ 
@@ -120,7 +133,7 @@ var hoo_ = function(data){
 						callback(null, rs);
 						return true;
 
-				 }else
+				 }
 
               return false;           					 
 
@@ -149,7 +162,7 @@ var hoo_ = function(data){
 
 		var make_logout = function( callback){
 
-			  alert("Error: usuarion no logueado. URL logout => " + get_url("logout"));
+			  return true;
 
 		}
 
@@ -171,10 +184,24 @@ var hoo_ = function(data){
 
 		var exec = function(cmd){
 
-			 var url = url[cmd];	
-			 var credentials = credentials;
+
+			 var _url = url[cmd];	
+			 
+			 if(cmd != "login")
+			 {
+			 	
+			 	var credentials = credentials;
+			 	 credentials.app_id = app_id;
+			 	 credentials.app_key = app_key;			 		
+
+			 }
+			else{
+			 
+			 var credentials = {};
 			 credentials.app_id = app_id;
 			 credentials.app_key = app_key;			 		
+
+			 }
 
 			 // ajax request JSONP
 
