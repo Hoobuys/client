@@ -18,7 +18,7 @@ Andrew Castaño
 
 Backend Developers:
 
-Javier Gómez (CEO) @gomosoft
+**Javier Gómez (CEO)** @gomosoft
 
 
 
@@ -28,11 +28,11 @@ Design team members
 
 **Denali Lythgoe (CDO)**
 
-**Cesar Fabian**
+Cesar Fabian
 
-**David paredes**
+David paredes
 
-**Julio Villadiego**
+Julio Villadiego
 
 
 
@@ -41,7 +41,7 @@ Marketing Team
 --------------
 
 
-Adriana Jaimes (CMO)
+**Adriana Jaimes (CMO)**
 
 
 
