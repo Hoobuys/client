@@ -2,6 +2,7 @@
  require_once("../assets/js/jquery.js");
  require_once("../assets/js/hoo_sdk.js");
  require_once("../assets/js/ejs.js");
+ require_once("../assets/js/events.js");
 
 
 
@@ -29,6 +30,11 @@
 
   // imprimimos en consola el objeto hoo
    console.log(hoo);
+
+
+   //iniciamos controladores de eventos
+
+      new events_controller().ini();
 
 
    }
