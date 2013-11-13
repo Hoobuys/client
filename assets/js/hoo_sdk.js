@@ -112,9 +112,9 @@ var hoo_ = function(data){
               	  {
               	  	
               	  	if(make_logout())              	  	  
-			  	         callback(null, {url:get_url("logout"), error: "User not logged"});
+			  	         callback({url:get_url("logout"), error: "User not logged", ok : false});
 			  	     else
-			  	         callback(true, {url:get_url("logout"), error: "Error on logout"});
+			  	         callback({url:get_url("logout"), error: "Error on logout", ok : false});
 
 			  	    return false;
 

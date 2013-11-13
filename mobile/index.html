@@ -9,6 +9,7 @@
 
    <title>Mobile app</title>
 
+
    <style type="text/css">
 
       .btn{
@@ -21,8 +22,16 @@ text-align: center;
 border-radius: 5px;
 margin: 0 auto;
 padding: 5px 10px;
-
+box-shadow: inset 0 0 2px rgb(179, 140, 140);   	
+-webkit-box-shadow: inset 0 0 2px rgb(179, 140, 140);   	
+-moz-box-shadow: inset 0 0 2px rgb(179, 140, 140);   	
+-o-box-shadow: inset 0 0 2px rgb(179, 140, 140);   	
 border: 1px solid rgba(255, 165, 0, 0.25);
+
+      }
+
+      .btn:active, .btn:focus{
+			border-bottom: 1px solid rgba(255, 165, 0, 0.25) !important;   
 
       }
 
@@ -39,6 +48,10 @@ border-bottom: 2px solid rgb(241, 174, 52);
 text-shadow: 0 0 1px rgb(155, 116, 67);
 font-weight: bold;
 
+      }
+
+      table td{
+      	  word-break: break-all !important;
       }
 
    </style>
@@ -63,91 +76,21 @@ margin-top: -35px;"/>
  		  </div>
  	</section>
 
-  <script src="../assets/js/hoo_sdk.js"></script>
-  <script src="../assets/js/ejs.js"></script>
-  <script src="../assets/js/jquery.js"></script>
 
-  <script type="text/javascript">
+<script src="../assets/js/require.js"></script>
 
 
-  
+<script type="text/javascript">
 
 
-   //esto es un snipet para ajustar el alto de #content cuando cambie el tam de la pantalla 
+  // se usa require para incluir los demás scripts
 
 
-   $.fn.resize_me = function(){
-
-   	   var container = $(this);
-   	   var ch = container.height();
-   	   var wh = $(window).height();
-
-   	   if( ch < wh )
-   	   	 container.css({height : wh - (150) + "px" });
-
-   }
+  require("../assets/js/index.js");
 
 
-   // esta función es solo para llamar al snipet resize_me
+</script>
 
-   function render_content(){ $("#content").resize_me() };
-
-
-
-
-// renderizamos #content por si el alto es menor al alto de la ventana (estetica)
-   render_content();
-
-
-
-// añadimos un listener para cuando la ventana cambie de tamaño llamar a render_content
-   $(window).on("resize",render_content);
-
-
-
-
-//render es el callback del init del hoo sdk para luego renderizar el home
-
-   function render(error, rs){
-
-   	 var data = {};
-   	
-   	     data.message = "Hoobuys JS SDK Demo";
-   	  
-   	  if(!error)
-   	     data.url = rs.url;
-   	     data.error = rs.error;
-
-   	 var content = new EJS({url:"views/home.ejs"})
-   					 .render(data);
-
-     var wrapper = document.getElementById("wrapper");
-   
-     wrapper.innerHTML = content;
-
-   }
-
-
-
-//iniciamos hoo SDK y  pasamos los parametros APP_ID y APP_KEY
-// el APP_SECRET no es necesario y no debe usarse lado cliente
-
-   hoo.init("APP_ID", "APP_KEY");
-
-
-
-
-//miramos si el usuario tiene una session valida para renderizar el home 
-   hoo.login( render);
-
-
-
-// imprimimos en consola el objeto hoo
-   console.log(hoo);
-
-
-
-  </script>
 
  </body>
 
