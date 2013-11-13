@@ -6,6 +6,9 @@ Frontend mobile / desktop repository for hoobuys.  [Check demo](http://hoobuys.c
 
 
 
+
+
+
 Dev team members
 ----------------
 
@@ -22,6 +25,9 @@ Backend Developers:
 
 
 
+
+
+
 Design team members
 -------------------
 
@@ -33,6 +39,8 @@ Cesar Fabian
 David paredes
 
 Julio Villadiego
+
+
 
 
 
