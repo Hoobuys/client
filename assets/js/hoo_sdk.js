@@ -11,7 +11,7 @@ var hoo_ = function(data){
 		var ls = window.localStorage;
 		var userid = undefined;
 		var credentials = undefined;				
-		var domain = "hoobuys.com";		
+		var domain = "hoobuys.com";			
 		var url = {
 
 			  "posts" : {
@@ -90,7 +90,7 @@ var hoo_ = function(data){
               if(!id && !key)
               {
               	
-              	logout();
+              	make_logout();
               	console.log("App key & id are required");
               	return false;
 
@@ -98,7 +98,7 @@ var hoo_ = function(data){
 
 
               if(!ls.userid)              
-              	logout();
+              	make_logout();
 
              userid = ls.userid;
 
@@ -133,6 +133,13 @@ var hoo_ = function(data){
 				}
 				else 
 					make_logout();
+
+		}
+
+
+		var make_logout = function( callback){
+
+			  alert("usuario no logueado");
 
 		}
 
