@@ -85,7 +85,7 @@ var HOO = function(data){
 		};
 
 
-		this.init = function(id, key, callback){
+		this.init = function(id, key){
 
               if(!id && !key)
               {

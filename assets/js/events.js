@@ -1,5 +1,7 @@
 var events_controller = function(){
 		
+		 var target_temp = null;
+
 		  this.ini = function(){
 
 		  	 on_listeners();
@@ -36,6 +38,7 @@ var events_controller = function(){
 		  var on_listeners = function(){
 
 		    $("[data-button]").on("click",actions_controller);
+		    $("#overlay").on("click", overlay_controller);
 
 		  }
 
@@ -52,6 +55,7 @@ var events_controller = function(){
 		     if(target != "self")
 		        {
 		            target = $(target)
+		            target_temp = target;
 		          
 		          /*  var distance = (target.width() + 50) * -1;
 
@@ -79,7 +83,8 @@ var events_controller = function(){
 
 		     if(target != "self")
 		        {
-		            target = $(target)
+		            target = $(target);
+		             target_temp = target;
 		          
 		          /*  var distance = 0;
 		            
@@ -96,6 +101,18 @@ var events_controller = function(){
 
 
 		        }
+
+		  }
+
+
+		  var overlay_controller = function(e){
+
+		  	  prevents(e);
+
+		  	  target_temp.removeClass("show")
+		  	  			 .addClass("hide");
+
+			  $(this).hide();		  	  			 
 
 		  }
 
