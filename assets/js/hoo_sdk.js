@@ -15,70 +15,70 @@ var hoo_ = function(data){
 		var url = {
 
 			  "posts" : {
-			       url : "https://" + domain + "/POSTS/{{api_id}}/{{api_key}}"			       
+			       url : "https://" + domain + "/POSTS/{{app_id}}/{{app_key}}"			       
 			   }
 			 , "login" : {
-			 	  url : "https://" + domain + "/LOGIN/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/LOGIN/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }			 
 			 , "logout" : {
-			 	  url : "https://" + domain + "/LOGOUT/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/LOGOUT/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "buy" : {
-			 	  url : "https://" + domain + "/BUY/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/BUY/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "purchases" : {
-			 	  url : "https://" + domain + "/PURCHASES/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/PURCHASES/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "sales" : {
-			 	  url : "https://" + domain + "/SALES/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/SALES/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "comment" : {
-			 	  url : "https://" + domain + "/COMMENT/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/COMMENT/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "like" : {
-			 	  url : "https://" + domain + "/LIKE/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/LIKE/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "search" : {
-			 	  url : "https://" + domain + "/SEARCH/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/SEARCH/{{app_id}}/{{app_key}}",
 			 	  method : "GET"
 			 }
 			 , "profile" : {
-			 	  url : "https://" + domain + "/PROFILE/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/PROFILE/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "billing" : {
-			 	  url : "https://" + domain + "/BILLING/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/BILLING/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "ads" : {
-			 	  url : "https://" + domain + "/ADS/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/ADS/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "zone" : {
-			 	  url : "https://" + domain + "/ZONE/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/ZONE/{{app_id}}/{{app_key}}",
 			 	  method : "POST"			 	  
 			 }
 			 , "share" : {
-			 	  url : "https://" + domain + "/SHARE/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/SHARE/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "follow" : {
-			 	  url : "https://" + domain + "/FOLLOW/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/FOLLOW/{{app_id}}/{{app_key}}",
 			 	  method : "POST"
 			 }
 			 , "add_funds" : {
-			 	  url : "https://" + domain + "/FUNDS/{{api_id}}/{{api_key}}",
+			 	  url : "https://" + domain + "/FUNDS/{{app_id}}/{{app_key}}",
 			 	  method : "POST"			 	  
 			 }
 			 , "notifications" : {
-			 	  url : "https://" + domain + "/NOTIFICATIONS/{{api_id}}/{{api_key}}"			 	  			 	 
+			 	  url : "https://" + domain + "/NOTIFICATIONS/{{app_id}}/{{app_key}}"			 	  			 	 
 			 }			 
 
 
@@ -96,11 +96,14 @@ var hoo_ = function(data){
 
               }
 
+             app_id = id;
+             app_key = key;
 
               if(!ls.userid)              
               	make_logout();
 
              userid = ls.userid;
+
 
 
 		}
@@ -137,9 +140,16 @@ var hoo_ = function(data){
 		}
 
 
+		var get_url = function(key){
+
+			return url[key].url.replace("{{app_id}}", app_id).replace("{{app_key}}", app_key);
+
+		}
+
+
 		var make_logout = function( callback){
 
-			  alert("usuario no logueado");
+			  alert("Error: usuarion no logueado. URL logout => " + get_url("logout"));
 
 		}
 
