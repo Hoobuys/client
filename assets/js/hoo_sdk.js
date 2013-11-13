@@ -3,7 +3,7 @@
 
 
 
-var hoo_ = function(data){
+var HOO = function(data){
 		
 
 	    var app_id = undefined;
@@ -141,6 +141,17 @@ var hoo_ = function(data){
 		}
 
 
+		this.get = function(what, callback){
+			 // all get actions
+		}
+
+
+
+		this.post = function(what, callback){
+			// all post actions 
+		}
+
+
 		this.logout = function( callback){
 
 				if(callback instanceof Function)
@@ -167,19 +178,7 @@ var hoo_ = function(data){
 		}
 
 
-		//  all methods 
 
-		// get_user_info , get_posts, get_billing, make_ads, get_ads, post, comment, get_comments
-		// like, follow, get_follow, add_funds, get_payments, purchases, sales, share, connect_facebook, connect_twitter, connect_ebay, connect_mercado_libre
-		// modify_profile, create_zone, get_zones ...
-
-
-		/*[
-
-			methods here
-	
-
-		]*/
 
 
 		var exec = function(cmd){
@@ -215,4 +214,4 @@ var hoo_ = function(data){
 
 
 
-window.hoo = new hoo_();
+window.hoo = new HOO();
