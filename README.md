@@ -26,10 +26,10 @@ Design team members
 -------------------
 
 
-Denali Lythgoe (CDO)
-Cesar Fabian
-David paredes
-Julio Villadiego
+*Denali Lythgoe (CDO)*
+*Cesar Fabian*
+*David paredes*
+*Julio Villadiego*
 
 
 
