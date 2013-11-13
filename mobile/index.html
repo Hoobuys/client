@@ -3,6 +3,10 @@
 
  <head>
 
+   <meta charset="utf-8" />
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    <title>Mobile app</title>
 
    <style type="text/css">
@@ -15,7 +19,6 @@ display: block;
 
 text-align: center;
 border-radius: 5px;
-width: 80%;
 margin: 0 auto;
 padding: 5px 10px;
 
@@ -30,9 +33,11 @@ border: 1px solid rgba(255, 165, 0, 0.25);
 
       .btn.yellow{
 		
-		color: rgb(163, 163, 163);
-		background: rgb(255, 246, 37);
+		color: rgb(255, 255, 255);
+background: rgb(255, 218, 21);
 border-bottom: 2px solid rgb(241, 174, 52);
+text-shadow: 0 0 1px rgb(155, 116, 67);
+font-weight: bold;
 
       }
 
@@ -40,20 +45,22 @@ border-bottom: 2px solid rgb(241, 174, 52);
 
  </head>
 
- <body style="background:rgb(247, 247, 247); min-width: 320px; font-size: 13px; font-family: 'Lucida grande', Verdana, sans-serif ">
+ <body style="background:rgb(247, 247, 247); min-width: 300px; font-size: 13px; font-family: 'Lucida grande', Verdana, sans-serif ">
 
- 	 <header style="position:fixed; top:0; width: 100%; left:0; height: 50px; background:red">
+ 	 <header style="position:fixed; top:0; width: 100%; left:0; height: 55px; background:#FF291E">
  	 	<span id="logo">
  	 		 <img src="../assets/img/svg/logo/logo.svg" style="width: 193px;
 margin: 0 auto;
 margin-top: -20px;
 display: block;
-margin-top: -37px;"/>
+margin-top: -35px;"/>
  	 	</span>
  	 </header>
 
 
- 	<section id="content" style="display:block; width:93%; padding: 35px 7px; border:1px solid rgba(204, 204, 204, 0.67); background:white; border-radius: 5px; margin:0 auto; margin-top: 65px;">
+ 	<section id="content" style="display:block; width:93%; padding: 35px 7px; border:1px solid rgba(204, 204, 204, 0.67); background:white; border-radius: 5px; margin:0 auto; margin-top: 70px;">
+ 		  <div id="wrapper" style="width:90%; margin:0 auto">
+ 		  </div>
  	</section>
 
   <script src="../assets/js/hoo_sdk.js"></script>
@@ -114,9 +121,9 @@ margin-top: -37px;"/>
    	 var content = new EJS({url:"views/home.ejs"})
    					 .render(data);
 
-     var container = document.getElementById("content");
+     var wrapper = document.getElementById("wrapper");
    
-     container.innerHTML = content;
+     wrapper.innerHTML = content;
 
    }
 

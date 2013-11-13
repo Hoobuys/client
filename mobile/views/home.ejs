@@ -5,7 +5,11 @@
  	<br />
  	<br />
  	<br />
- 	<table>
+ 	
+    
+    <% if (error) { %>
+
+    <table >
  		 <tr>
  		 	<td style="background: #F0F0F0;
 padding: 3px 5px;
@@ -26,9 +30,34 @@ border-collapse: collapse;text-align:right;"><strong>Logout URL<strong>&nbsp;</t
  	<br / >
  	<br / >
  	<br / >
-    
-    <%if (error) { %>
-    
+
+    <span>A simple example when we not have user logged, we'll show a login button.</span> 
+    <br />
+    <br />
  	<a href="#" class="btn big yellow">Register & Get <br /> <b style="margin-top:5px; display:block;">$10 USD</b></a>
+
+ 	<% } else { %>
+
+ 	<table >
+ 		 <tr>
+ 		 	<td style="background: #F0F0F0;
+padding: 3px 5px;
+margin: 0;
+border: 0;
+border-collapse: collapse;text-align:right;"><strong>User</strong>&nbsp;</td><td><%= user.name %></td>
+ 		 </tr>
+ 		 <tr>
+ 		 	<td style="background: #F0F0F0;
+padding: 3px 5px;
+margin: 0;
+border: 0;
+border-collapse: collapse;text-align:right;"><strong>id<strong>&nbsp;</td><td><%= user.id %></td>
+ 		 </tr>
+ 	</table>
+
+ 	<br />
+ 	<br / >
+ 	<br / >
+ 	<br / >
 
  	<% } %>
