@@ -1,0 +1,267 @@
+/*
+   Gomosoft, Creando soluciones en software
+ */
+
+
+.superp{
+
+	width:500px;
+	min-width:500px;
+	height:auto;
+	position:fixed;
+	left:50%;
+	top:50%;
+	border:2px solid #666;
+	margin-left:-254px;
+	margin-top:-154px;
+	background: #fff;
+    box-shadow: -10px 5px 30px #333;
+   -webkit-box-shadow: 10px 5px 30px #333;
+   -moz-box-shadow: -10px 5px 30px #333;
+   border-radius:10px;
+   z-index: 9999;
+
+}
+
+
+
+.superp ul,li{
+	list-style:none;
+}
+
+.superp ul{
+	border-radius:10px;
+}
+
+.superp li.pri{
+    background:rgb(139,180,68);
+    background: -webkit-linear-gradient(top, rgb(300,0,0) 0%, rgb(200,0,0) 100%);
+	height:40px;
+	border-bottom:1px solid #666;
+	border-radius:10px 10px 0 0;
+}
+
+.superp li.ult{
+	background:#f5f5f5;
+	height:60px;
+	border-top:1px solid #666;
+	border-radius:0 0 10px 10px;
+}
+
+.superp li.med{
+	height:auto;
+	float:none;
+	margin:0 auto;
+    height: auto;
+	padding:0 0 20px 0;
+}
+
+.bot_cerrar{
+	font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+	text-align:center;
+
+	float:right;
+	font-weight:bold;
+	font-size:22px;
+	cursor: pointer;
+	margin:3px 5px 0 0;
+}
+
+.bot_cerrar:hover{
+	background:none;
+    color:red;
+}
+
+.superp .pri .title{
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	margin:0 0 0 5px;
+	padding-top:10px;
+	width:auto;
+	display:block;
+	float:left;
+}
+
+.superp li p{
+	width:450px;
+	margin:0 auto;
+	font-style:italic;
+	padding: 20px 10px;
+}
+
+.superp li p a{
+	float:left;
+	padding:0 8px;
+	color:navy;
+}
+
+.superm {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#666;
+	opacity:0.30;
+	float:left;
+}
+
+
+
+ .superp ul.formu li{
+     display: block !important;
+     margin-top: 8px !important;
+     width: 100% !important;
+     padding: 3px;
+ }
+
+.superp ul.formu li:first-child{
+    margin-top: 0 !important;
+}
+
+.superp .s_conte form.formular{
+
+    padding-left: 0 !important;
+
+}
+
+.superp .s_conte form.formular textarea#pq{
+    float: left;
+    width: 100px !important;
+    height: 150px !important;
+    min-width:300px;
+    min-height:150px;
+    max-width:350px;
+}
+
+.superp .s_conte{
+
+  padding-bottom: 10px ;
+
+}
+
+.superp .s_conte li label{
+    width: 120px;
+}
+
+.superp .boton{
+ padding:5px;
+ border:1px solid #ccc;
+ background:rgb(139,180,68);
+ color:#fff;
+ cursor:pointer;
+ margin:0 0 0 10px;
+  box-shadow: 2px 2px 10px #555;
+  -webkit-box-shadow: 2px 2px 10px #555 ;
+  -moz-box-shadow: 2px 2px 10px #555 ;
+  border-radius:3px;
+}
+
+.superp a.boton : hover{
+ color:#fff !important;
+     text-decoration:none;
+}
+
+.superp li p.msg{
+    text-align: left;
+}
+
+.superp .boton:hover{
+ background:rgb(139,180,60);
+}
+.superp .boton:active{
+  background:rgb(139,140,10);
+}
+
+.superp .formular{
+	padding:10px 0;
+}
+.superp .formular li{
+	width:100%  !important;
+	display:inline-block;
+	  height:30px;
+	  margin:10px 0 0 0 !important;
+	  padding-bottom:10px !important;
+  }
+.superp .formular fieldset{
+	border:1px solid #ccc;
+	padding:10px 4px;
+	border-radius:5px;
+	box-shadow : 0 0 10px #ccc;
+}
+.superp .formular fieldset legend{
+	padding:0 5px; font-style:italic; color:#333 ; font-weight:bold; font-size: 14px; background: #fff;
+}
+
+.superp input.peque{
+	width:60px !important;
+}
+
+.superp .formular textarea{
+	border:1px solid #ccc;
+	border-radius: 0 ;
+	box-shadow: 1px 1px 20px #f5f5f5;
+	min-width:446px;
+	min-height:75px;
+	max-width:446px;
+    max-height: 75px;
+	padding:5px 10px;
+	display: inline-block;
+}
+
+.superp .formular span{
+	width:100%;
+	display:inline;
+}
+.superp .formular fieldset .li_field{
+	display:inline-block;
+    padding:10px 5px;
+	width:100% !important;
+}
+.superp .formular li h2{
+	  margin:10px 0 ;
+	  padding:10px 0;
+  }
+
+.clear{
+	clear:both;
+}
+
+.superp ul li{
+
+    width: 100%;
+    display: block;
+
+}
+
+
+.superp form label{
+	width:150px;
+	font-size:14px;
+	margin-left:5px;
+	padding:0 10px;
+	text-align:right;
+	float:left;
+
+}
+
+.superp form input{
+	border:1px solid #ccc;
+	height:15px;
+	width:190px;
+	padding:4px 7px;
+	margin:0 0 0 10px;
+	float:left;
+	box-shadow: 1px 1px 20px #fefefe;
+    border-radius: 0;
+}
+
+.superp a{
+	text-decoration:none;
+}
+
+.superp a:hover{
+	text-decoration:underline;
+	color:#777;
+}
+
